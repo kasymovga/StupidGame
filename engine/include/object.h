@@ -1,4 +1,4 @@
-#include <engine.h>
+class Engine;
 class Object {
     private:
         double x,y,angle;

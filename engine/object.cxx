@@ -1,20 +1,20 @@
 #include <object.h>
 
 void Object::setX(double x) {
-	this.x = x;
+	this->x = x;
 }
 double Object::getX() {
-	return this.x;
+	return this->x;
 }
 void Object::setY(double y) {
-	this.y = y;
+	this->y = y;
 }
 double Object::getY() {
-	return this.y;
+	return this->y;
 }
-void setAngle(double angle) {
-	this.angle = angle;
+void Object::setAngle(double angle) {
+	this->angle = angle;
 }
-double getAngle() {
-	return this.angle;
+double Object::getAngle() {
+	return this->angle;
 }
