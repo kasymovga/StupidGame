@@ -1,7 +1,7 @@
 include ../Makefile.common
 
 HEADERS=$(wildcard include/*.h) Makefile
-OBJECTS=engine.o ui.o
+OBJECTS=engine.o ui.o object.o
 
 .PHONY : all clean
 
