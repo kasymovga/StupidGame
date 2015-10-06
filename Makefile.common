@@ -2,6 +2,4 @@ CXX=g++
 CXXFLAGS_SDL=`sdl-config --cflags`
 CXXFLAGS_ENGINE=-I$(START_DIR)/engine/include $(CXXFLAGS_SDL)
 CXXFLAGS_GAME=$(CXXFLAGS_ENGINE) -I$(START_DIR)/game/include
-LDFLAGS_SDL=`sdl-config --libs`
 CXXCOMP=$(CXX) $(CXXFLAGS_GAME) -c -o
-CXXLINK=$(CXX) $(LDFLAGS_SDL) -o
