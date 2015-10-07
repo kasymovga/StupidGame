@@ -11,5 +11,8 @@ void Engine::log(const char *text) {
 
 int Engine::run() {
 	gameInit();
+	struct UIEvent *event;
+	for (; event->type != UIEventQuit; event = ui.getEvent()) {
+	}
 	return 0;
 }

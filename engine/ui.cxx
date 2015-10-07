@@ -3,6 +3,7 @@
 struct UIPrivateStruct {
 	SDL_Surface *screen;
 	const SDL_VideoInfo *videoInfo;
+	SDL_Event event;
 };
 
 UI::UI() {
@@ -18,4 +19,13 @@ UI::UI() {
 UI::~UI() {
 	SDL_FreeSurface(privateStruct->screen);
 	delete privateStruct;
+}
+
+UIEvent *UI::getEvent() {
+	SDL_PollEvent(&privateStruct->event);
+	event.type = UIEventNone;
+	if (privateStruct->event.type == SDL_QUIT) {
+		event.type = UIEventQuit;
+	}
+	return &event;
 }
